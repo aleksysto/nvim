@@ -9,7 +9,7 @@ vim.opt.expandtab = true
 vim.opt.smartindent = true
 
 vim.opt.wrap = false
-vim.opt.undodir = os.getenv("HOME") .. "./vim/undodir"
+vim.opt.undodir = os.getenv("HOME") .. "/vim/undodir"
 vim.opt.undofile = true
 
 vim.opt.hlsearch = false
@@ -34,6 +34,6 @@ vim.lsp.handlers["textDocument/publishDiagnostics"] =
         -- Enable virtual text, override spacing to 4
         virtual_text = {spacing = 4},
         signs = true,
-        update_in_insert = false
+        update_in_insert = false,
+        source = true
     })
-
