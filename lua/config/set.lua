@@ -26,14 +26,15 @@ vim.opt.updatetime = 50
 vim.colorcolumn = "80"
 vim.g.mapleader = " "
 vim.opt.scrolloff = 10
-vim.opt.fillchars = {eob = " "}
+vim.opt.fillchars = { eob = " " }
 vim.lsp.handlers["textDocument/publishDiagnostics"] =
     vim.lsp.with(vim.lsp.diagnostic.on_publish_diagnostics, {
         -- Disable underline, it's very annoying
         underline = false,
         -- Enable virtual text, override spacing to 4
-        virtual_text = {spacing = 4},
+        virtual_text = { spacing = 4 },
         signs = true,
         update_in_insert = false,
         source = true
     })
+require('tiny-glimmer').change_hl({ 'fade', 'pulse', 'left_to_right' }, { from_color = '#ffa6f6', to_color = '#ffe3fc' })
