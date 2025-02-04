@@ -54,6 +54,8 @@ return {
                 local opts = { buffer = event.buf }
 
                 vim.keymap.set('n', 'gd', function() vim.lsp.buf.definition() end, opts)
+                vim.keymap.set("n", "gn", "<cmd>tab split | lua vim.lsp.buf.definition()<CR>", {})
+                vim.keymap.set("n", "gb", "<cmd>tabc | tabp<CR>", {})
                 vim.keymap.set('n', 'K', function() vim.lsp.buf.hover() end, opts)
                 vim.keymap.set('n', '<leader>vws', function() vim.lsp.buf.workspace_symbol() end, opts)
                 vim.keymap.set('n', '<leader>vd', function() vim.diagnostic.open_float({source = true}) end, opts)
