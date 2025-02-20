@@ -37,4 +37,3 @@ vim.lsp.handlers["textDocument/publishDiagnostics"] =
         update_in_insert = false,
         source = true
     })
-require('tiny-glimmer').change_hl({ 'fade', 'pulse', 'left_to_right' }, { from_color = '#ffa6f6', to_color = '#ffe3fc' })

@@ -3,7 +3,6 @@ return {
     name = "prettier",
     dependencies = {
         'neovim/nvim-lspconfig',
-        'jose-elias-alvarez/null-ls.nvim',
 
     },
     config = function()
