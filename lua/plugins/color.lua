@@ -120,8 +120,10 @@ return {
             show_eob = true,
             -- If true, highlights {sign,fold}column the same as cursorline
             cursorline_gutter = true,
+            dark_gutter = true,
+            favor_treesitter_hl = false,
             diagnostics = {
-                darker = true, -- Darker colors for diagnostic
+                darker = true,     -- Darker colors for diagnostic
                 undercurl = false, -- Use undercurl for diagnostics
                 background = true, -- Use background color for virtual text
             },
