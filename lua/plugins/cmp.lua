@@ -20,6 +20,13 @@ return {
 		-- this is the function that loads the extra snippets to luasnip
 		-- from rafamadriz/friendly-snippets
 		require("luasnip.loaders.from_vscode").lazy_load()
+		require("luasnip").config.set_config({
+			choiceNode = {
+				win_opts = {
+					border = "rounded",
+				},
+			},
+		})
 
 		cmp.setup({
 			formatting = {
@@ -61,8 +68,8 @@ return {
 				["<S-Tab>"] = nil,
 			}),
 			window = {
-				completion = cmp.config.window.bordered(),
-				documentation = cmp.config.window.bordered(),
+				completion = cmp.config.window.bordered({ border = "rounded" }),
+				documentation = cmp.config.window.bordered({ border = "rounded" }),
 			},
 			snippet = {
 				expand = function(args)
@@ -70,5 +77,16 @@ return {
 				end,
 			},
 		})
+		-- vim.lsp.config.pyrefly = {
+		--     capabilities=lsp_capabilities,
+		-- 	settings = {
+		-- 		python = {
+		-- 			analysis = {
+		-- 				typeCheckingMode = "strict",
+		-- 			},
+		-- 		},
+		-- 	},
+		-- }
+		-- vim.lsp.enable("pyrefly")
 	end,
 }

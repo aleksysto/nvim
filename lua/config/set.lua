@@ -22,7 +22,7 @@ vim.opt.scrolloff = 8
 vim.opt.signcolumn = "yes"
 vim.opt.isfname:append("@-@")
 
-vim.opt.updatetime = 50
+vim.opt.updatetime = 150
 
 vim.colorcolumn = "80"
 vim.g.mapleader = " "
@@ -34,7 +34,7 @@ vim.lsp.handlers["textDocument/publishDiagnostics"] = vim.lsp.with(vim.lsp.diagn
 	-- Enable virtual text, override spacing to 4
 	virtual_text = { spacing = 4 },
 	signs = true,
-	update_in_insert = false,
+	update_in_insert = true,
 	source = true,
 })
 vim.diagnostic.config({ virtual_text = true })
